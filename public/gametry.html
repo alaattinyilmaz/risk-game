@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="../socket.io/socket.io.js"></script>
+    <title>Hello, world!</title>
+    <style>
+    	#messages{height: 300px;}
+        #container{overflow: auto;}
+    </style>
+  </head>
+<body>
+  <h1 align="center">RISK GAME LOGIC ABSTRACTION </h1>
+
+    <div class="container">
+    	<div class="row">
+    		<div class ="col-md-6 offset-md-3 col-sm-12">
+    			<h1 class="text-center">ASSUMED: 5 PLAYERS </h1>
+    			<button id="clear" class="btn btn-danger">Clear</button>
+    			<div id="status"></div>
+    			<div id="chat">
+    				<input type="text" id="username" class="form-control" placeholder="Enter name">
+    				<br>
+    				<div class="card">
+    					<div id="messages" class="card-block">
+						aanann
+    					</div>
+    				</div>
+    				<br>
+    				<textarea id="textarea" class="form-control" placeholder="Enter a message..."></textarea>
+    			</div>
+    			</h1>
+    		</div>
+    	</div>
+    </div>
+	<script>
+    	(function(){
+    		var element = function(id)
+    		{
+    			return document.getElementById(id);
+    		}
+
+    		// Get element
+    		var status = element('status');
+    		var messages = element('messages');
+    		var textarea = element('textarea');
+    		var username = element('username');
+    		var clearBtn = element('clear');
+
+    		// Set default status
+    		var statusDefault = status.textContent;
+
+    		// Set the status
+    		var setStatus = function(s){
+    			status.textContent = s;
+    		}
+
+    		// Connect to socket.io
+			var socket = io.connect();
+
+    		if(socket !== undefined)
+    		{
+    			console.log("Socket connected to server.");
+    		}
+
+
+    		// Handle Output Events
+    		socket.on('output', function(data){
+    			
+    			if(data.length)
+    			{
+    				for (i = 0; i < data.length; i++)
+    				{
+    					var message = document.createElement('div');
+    					messages.setAttribute('class', 'chat-message');
+    					message.textContent = data[i].name+ ": " + data[i].message;
+    					messages.append(message);
+    					//messages.insertBefore(message, messages.firstChild);
+    				}
+    			}
+    			console.log(data);
+    		});
+
+    		// Get Status from Server
+    		socket.on('status', function(data){
+    			// get message status
+    			setStatus((typeof data === 'object') ? data.message: data);
+
+    			// If status is clear, clear text
+    			if(data.clear)
+    			{
+    				textarea.value = '';
+    			}
+    		});
+
+
+    		// Handle Input
+    		textarea.addEventListener('keydown', function(event){
+    			if(event.which === 13 && event.shiftKey == false){ // enter tusu
+    				// Emit to server input
+    				console.log(textarea.value);
+    				socket.emit('input', {
+    					name:username.value,
+    					message:textarea.value
+    				}); 
+                    textarea.value = '';
+    				event.preventDefault();
+    			}
+    		});
+
+
+    	})(); 
+    </script>
+
+</body>
+</html>

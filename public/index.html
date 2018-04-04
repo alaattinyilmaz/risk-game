@@ -1,0 +1,107 @@
+<html>
+<head>
+	<title>Risk Game</title>
+	<!-- Latest compiled and minified CSS --><!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"> </script>
+	<script src="../socket.io/socket.io.js"></script>
+	<style>
+		body{
+			margin-top: 30px;
+		}
+		#messageArea{
+			display: none;
+		}
+	</style>
+</head>
+	<body>
+	<div class="container">
+		<div id="userFormArea" class="row">
+			<div class="col-md-12">
+				<form id ="userForm">
+					<div class="form-group">
+						<label>Enter Username</label>
+						<input class="form-control" id="username"></textarea>
+						<br>
+						<input type="submit" class="btn btn-primary" value="Login">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="messageArea" class="row">
+			<div class="col-md-4">
+				<div class="well">
+					<h3>Online Users</h3>
+					<u1 class="list-group" id="users"></u1>
+				</div>
+			</div>		
+			<div class="col-md-8">
+				<div class="chat" id="chat"></div>
+
+				<form id ="messageForm">
+					<div class="form-group">
+						<label>Enter Message</label>
+						<textarea class="form-control" id="message"></textarea>
+						<br>
+						<input type="submit" class="btn btn-primary" value="Send Mesage">
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			console.log(io);
+			var socket = io.connect();
+			var $messageForm = $('#messageForm');
+			var $messageArea = $('#messageArea');
+			var $message = $('#message');
+			var $chat = $('#chat');
+			var $userFormArea = $('#userFormArea');
+			var $username = $('#username');
+			var $users = $('#users');
+
+			$messageForm.submit(function(e){
+				console.log('Message Submitted!');
+				e.preventDefault();
+				socket.emit('send message', $message.val());
+				$message.val('');
+			});
+
+			$userFormArea.submit(function(e){
+
+				console.log('Message Submitted!');
+				e.preventDefault();
+				socket.emit('new user', $username.val(), function(data){
+					if(data)
+					{
+						$userFormArea.hide();
+						$messageArea.show();
+					}
+				});
+			});
+
+			// New message
+			socket.on('new message', function(data){
+				$chat.append('<div class="well">'+data.username+':\t'+data.msg+'</div');
+			});
+
+			socket.on('get users', function(data){
+				var html = '';
+
+			
+				for (i = 0; i < data.length; i++)
+				{
+					html += '<li class="list-group-item">'+data[i]+'</i>';
+				}
+
+				$users.html(html);
+			});
+
+
+		});
+	</script>
+
+	</body>
+	</html>

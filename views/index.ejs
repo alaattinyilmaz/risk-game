@@ -1,0 +1,31 @@
+<% include partials/header %>
+	<h1> This is a TEST Server Environment for RISKBUDUR </h1>
+
+	<form method="POST" action="/users/add/">
+
+	<label> First Name </label>
+	<input type = "text" name = "first_name">
+	<br>
+
+	<label> Last Name </label>
+	<input type = "text" name = "last_name">
+	<br>	
+
+	<label> Email </label>
+	<input type = "text" name = "email">
+	<br>
+
+	<input type ="submit" value = "Submit"> 
+	</form>
+ 	<h1><%=title %></h1>
+	<ul> 
+
+	<% users.forEach(function(user){ %>
+
+	<li>
+	<%= user.first_name %>
+	</li>
+	<% }) %>
+
+	</ul>
+<% include partials/footer %>
