@@ -1,21 +1,21 @@
-  var countriesLayer;
+ var countriesLayer;
   var current_player;
   var lastClick, lastClickedTerritory;
 
 // Each territory has a territoryid, territory name, number of soldiers on it and who belongs to playerid (-1 means nobody)
-function Territory (tid, tname, neighbors, infantry, ownto){
+function Territory (tid, tname, neighbors, infantry, ownsto){
   this.tid = tid;
   this.tname = tname;
   this.neighbors = neighbors;
   this.infantry = infantry;
-  this.ownto = ownto;
+  this.ownsto = ownsto;
 }
 
 // All territories with their neighbors
-var TER0 = new Territory(0, 'Venezuela',  [ 4, 1, 2 ] , 0, -1);
-var TER1 = new Territory(1, 'Brazil',  [ 3, 0, 2, 13 ] , 0, -1);
-var TER2 = new Territory(2, 'PERU',  [ 3, 0, 1 ] , 0, -1);
-var TER3 = new Territory(3, 'Argentina',  [ 0, 2 ] , 0, -1);
+var TER0 = new Territory(0, 'Venezuela',  [ 4, 1, 2 ] , 0, 1);
+var TER1 = new Territory(1, 'Brazil',  [ 3, 0, 2, 13 ] , 0, 1);
+var TER2 = new Territory(2, 'PERU',  [ 3, 0, 1 ] , 0, 1);
+var TER3 = new Territory(3, 'Argentina',  [ 0, 2 ] , 0, 1);
 var TER4 = new Territory(4, 'Mexico',  [ 6, 0, 5 ] , 0, -1);
 var TER5 = new Territory(5, 'Western United States',  [ 6, 4, 11, 10 ] , 0, -1);
 var TER6 = new Territory(6, 'Eastern United States',  [ 10, 7, 5 ] , 0, -1);
@@ -156,23 +156,40 @@ setTurn(USER.id); // Assume we started first!
       return false;
     })();  
 
+  currentPhase = REINFORCEMENT;
+  
   // When user clicks a territory this function invokes
   function whenClicked(e)
   {
-    if(currentPlayer == PLAYER2.id && !isGameFinished)
+    if(currentPlayer == USER.id && !isGameFinished)
     {
       var glayer = e.target;  // Layer corresponds to Countries/Territories
       glayer.setStyle({ weight : 3, color: 'blue', fillColor:'yellow', fillOpacity: 0.8});
       var clickedTerritory = mapTerritories.indexOf(glayer); // Which territory did I clicked? It search it from map territory
 
       // TODO: Conditions must be added: REINFORCE, ATTACK, FORTIFY
-      if(!firstTurn || (firstTurn && firstTurnInfantries < 20))
+      if(firstTurn && (firstTurnInfantries < 20))
       {       
       // Changing label ol this territory
        putInfantry(glayer); // Add infantry on this territory
        map.closeTooltip(glayer.getTooltip()); // Close old tooltip
        glayer.bindTooltip((getInfantry(glayer)).toString(), {permanent:true,direction:'center',className: 'countryLabel'}); 
       }
+	  else if (!firstTurn){
+	  
+	  // At reinforcement phase user can only put infantries on his/her own territory
+		if(currentPhase == REINFORCEMENT){
+			setStatus(territories[clickedTerritory].ownsto);
+			if(territories[clickedTerritory].ownsto == USER.id){
+				putInfantry(glayer); // Add infantry on this territory
+				map.closeTooltip(glayer.getTooltip()); // Close old tooltip
+				glayer.bindTooltip((getInfantry(glayer)).toString(), {permanent:true,direction:'center',className: 'countryLabel'}); 
+			}
+		}
+			
+	  
+	  
+	  }
 
       if(lastClick && lastClick != glayer)
         { resetHeighlightofNeighBors(lastClickedTerritory); }
@@ -188,7 +205,6 @@ setTurn(USER.id); // Assume we started first!
 
   }
 
-  currentPhase = REINFORCEMENT;
 
   function reinforcePhase(){
     if(currentPlayer == USER.id)
@@ -244,6 +260,7 @@ setTurn(USER.id); // Assume we started first!
       }      
       else if(currentPhase == FORTIFY)
       { 
+		firstTurn = false;
         endTurn();
       }
   }
