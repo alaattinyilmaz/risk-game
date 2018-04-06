@@ -4,60 +4,73 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);	
 var router = require('./router')(app);
 var path = require('path');
-//var bodyParser = require('body-parser');
-//var game = require('./public/game');
+var bodyParser = require('body-parser');
+var game = require('./public/game');
 // var mysocket = require('./mysocket');
 
-app.use(router);
-/*
+
 // Bodyparser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-*/
 
-
-/*
 // Database connection
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/chatdb');
 
 var db = mongoose.connection;
 
+app.use(router);
 var client = io.sockets;
 
+/*
 io.sockets.on('connection', function(socket){
   	console.log('Socket connected.');
 });
 */
 
-//	Chat = require('./public/models/chats');
+	Chat = require('./public/models/chats');
+	Territory = require('./public/models/territory');
 
-//	client.on('connection', function(socket){ 	
+	client.on('connection', function(socket){ 	
 		 
 		 
 //		 console.log("connection occured"); 
 
 		// let chat = db.collection('chats');
-		/*
 		 // Create function to send status
 		 sendStatus = function(s)
 		 {
 		 	socket.emit('status', s);
 		 }
-		*/
+
 		 //console.log(chat);
 
-/*
+
+
+		 // VEDAT SENDEN İSTEĞİM: 
+		 // Alttaki fonksiyonun benzerini kullanarak gidip mapteki o ülkedeki askerlerin sayısını çeken bir fonksiyon yapmanı istiyorum
 		 // Get chats from mongo collection
+		 // game içerisinde istediğim attributelar:
+		 // 
+		Territory.getTerritories(function(err, territories){
+			if(err)	 		
+			{ console.log("Socket error occured."); }
+			else
+			{
+				console.log(territories);
+				socket.emit('output', territories); 
+			 } 	// Emit the territories
+		});
+
+
 		Chat.getChats(function(err, chats){
 			if(err)	 		
 			{ console.log("Socket error occured."); }
 			else
 			{ socket.emit('output', chats); } 	// Emit the messages
 		});
-*/
 
-/*
+
 
 	 // Handle input events
 		 	socket.on('input', function(data){
@@ -98,22 +111,19 @@ io.sockets.on('connection', function(socket){
 		 	});
 
 		 	// Handle clear
-		 	/*
-		 	socket.on('clear', function(data){
+		 	/*socket.on('clear', function(data){
 		 		// Remove all chats from collection
 		 		chat.remove({}, function(){
 		 			socket.emit('cleared');
 		 		});
 			});
-			
+			*/
 
 	});
 
 
-*/
 
-// BİR HATA VERİRSE SOCKET HANDLİNGİN AŞAĞISINA KADAR COMMENTE 
-
+/*
 // Socket Handling
 var users = [];
 var connections = [];
@@ -157,7 +167,11 @@ io.sockets.on('connection', function(socket){
 
 });
 
+*/
+
+var date = new Date();
+var currentTime = date.getHours()+':'+date.getMinutes()+':'+date.getSeconds();
 
 server.listen(3000, function(){
-	console.log('Server has started on Port 3000.');
+	console.log('\nServer has started on Port 3000. Time:', currentTime);
 });

@@ -261,8 +261,7 @@ var LeafletLabel = L.Class.extend({
 	_fireMouseEvent: function (e) {
 		this.fire(e.type, {
 			originalEvent: e
-		});
-
+		});	
 		// TODO proper custom event propagation
 		// this line will always be called if marker is in a FeatureGroup
 		if (e.type === 'contextmenu' && this.hasEventListeners(e.type)) {

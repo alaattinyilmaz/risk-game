@@ -3,17 +3,16 @@ module.exports = function(app) {
     var express = require('express')
 	var router = express.Router();
 
-	app.use('/get_map/lib/', express.static(__dirname + '/public/map/lib/'));
-	app.use('/get_map/data/', express.static(__dirname + '/public/map/data/'));
+	app.use('/get_map/', express.static(__dirname + '/public/map/'));
+	//app.use('/get_map/data/', express.static(__dirname + '/public/map/data/'));
 	// app.use('/game/', express.static(__dirname + '/public/game/'));
 
-/*
 	Genre = require('./public/models/genre');
 	Book = require('./public/models/book');
-*/
+
 	// MainPage 
 	router.get('/', function(req, res){
-		res.sendFile(__dirname + '/public/index.html');
+		res.sendFile(__dirname + '/public/mainPage.html');
 	});	
 
 	// Get Map

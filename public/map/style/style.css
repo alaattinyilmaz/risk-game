@@ -1,0 +1,162 @@
+
+  @media (min-width: 1200px) {
+    .container{
+        max-width: 900px;
+        }
+    }
+.btn-attack { 
+  color: #ffffff; 
+  background-color: #9E0E15; 
+  border-color: #000000; 
+} 
+ 
+.btn-attack:hover, 
+.btn-attack:focus, 
+.btn-attack:active, 
+.btn-attack.active, 
+.open .dropdown-toggle.btn-attack { 
+  color: #ffffff; 
+  background-color: #9E0E15; 
+  border-color: #000000; 
+} 
+ 
+.btn-attack:active, 
+.btn-attack.active, 
+.open .dropdown-toggle.btn-attack { 
+  background-image: none; 
+} 
+ 
+.btn-attack.disabled, 
+.btn-attack[disabled], 
+fieldset[disabled] .btn-attack, 
+.btn-attack.disabled:hover, 
+.btn-attack[disabled]:hover, 
+fieldset[disabled] .btn-attack:hover, 
+.btn-attack.disabled:focus, 
+.btn-attack[disabled]:focus, 
+fieldset[disabled] .btn-attack:focus, 
+.btn-attack.disabled:active, 
+.btn-attack[disabled]:active, 
+fieldset[disabled] .btn-attack:active, 
+.btn-attack.disabled.active, 
+.btn-attack[disabled].active, 
+fieldset[disabled] .btn-attack.active { 
+  background-color: #1642A8; 
+  border-color: #000000; 
+} 
+ 
+.btn-attack .badge { 
+  color: #1642A8; 
+  background-color: #ffffff; 
+}
+
+.btn-reinforce { 
+  color: #ffffff; 
+  background-color: #1642A8; 
+  border-color: #000000; 
+} 
+ 
+.btn-reinforce:hover, 
+.btn-reinforce:focus, 
+.btn-reinforce:active, 
+.btn-reinforce.active, 
+.open .dropdown-toggle.btn-reinforce { 
+  color: #ffffff; 
+  background-color: #09821B; 
+  border-color: #000000; 
+} 
+ 
+.btn-reinforce:active, 
+.btn-reinforce.active, 
+.open .dropdown-toggle.btn-reinforce { 
+  background-image: none; 
+} 
+ 
+.btn-reinforce.disabled, 
+.btn-reinforce[disabled], 
+fieldset[disabled] .btn-reinforce, 
+.btn-reinforce.disabled:hover, 
+.btn-reinforce[disabled]:hover, 
+fieldset[disabled] .btn-reinforce:hover, 
+.btn-reinforce.disabled:focus, 
+.btn-reinforce[disabled]:focus, 
+fieldset[disabled] .btn-reinforce:focus, 
+.btn-reinforce.disabled:active, 
+.btn-reinforce[disabled]:active, 
+fieldset[disabled] .btn-reinforce:active, 
+.btn-reinforce.disabled.active, 
+.btn-reinforce[disabled].active, 
+fieldset[disabled] .btn-reinforce.active { 
+  background-color: #1642A8; 
+  border-color: #000000; 
+} 
+ 
+.btn-reinforce .badge { 
+  color: #1642A8; 
+  background-color: #ffffff; 
+}
+.btn-fortify { 
+  color: #FFFFFF; 
+  background-color: #1642A8; 
+  border-color: #000000; 
+} 
+ 
+.btn-fortify:hover, 
+.btn-fortify:focus, 
+.btn-fortify:active, 
+.btn-fortify.active, 
+.open .dropdown-toggle.btn-fortify { 
+  color: #FFFFFF; 
+  background-color: #FF5900; 
+  border-color: #000000; 
+} 
+ 
+.btn-fortify:active, 
+.btn-fortify.active, 
+.open .dropdown-toggle.btn-fortify { 
+  background-image: none; 
+} 
+ 
+.btn-fortify.disabled, 
+.btn-fortify[disabled], 
+fieldset[disabled] .btn-fortify, 
+.btn-fortify.disabled:hover, 
+.btn-fortify[disabled]:hover, 
+fieldset[disabled] .btn-fortify:hover, 
+.btn-fortify.disabled:focus, 
+.btn-fortify[disabled]:focus, 
+fieldset[disabled] .btn-fortify:focus, 
+.btn-fortify.disabled:active, 
+.btn-fortify[disabled]:active, 
+fieldset[disabled] .btn-fortify:active, 
+.btn-fortify.disabled.active, 
+.btn-fortify[disabled].active, 
+fieldset[disabled] .btn-fortify.active { 
+  background-color: #1642A8; 
+  border-color: #000000; 
+} 
+ 
+.btn-fortify .badge { 
+  color: #1642A8; 
+  background-color: #FFFFFF; 
+}
+  .countryLabel{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15;
+    background-color: #ba0e0e;
+    border:1;
+    border-color: #000000;
+    border-radius:140px;
+    box-shadow: 0 0px 0px;
+  }
+
+    .btn-group{
+    padding: 2%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
