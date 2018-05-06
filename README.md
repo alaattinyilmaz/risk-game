@@ -5,5 +5,5 @@ This project is an Express and MongoDB based, JavaScript coded implementation of
 
 # How to Install?
 
-You firstly needed to install MongoDB and create necessary database and tables in order to run the game.
+You firstly need to install MongoDB and create necessary database and tables in order to run the game.
  
