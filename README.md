@@ -21,3 +21,4 @@ db.createCollection('players');
 db.createCollection('territories');
 db.createCollection('lobbychat');
 db.createCollection('users');
+ 
