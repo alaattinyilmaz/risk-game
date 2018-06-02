@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RiskBUDUR</title>
+
+		<!-- meta -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- css -->
+		<link rel="stylesheet" href="/views/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/views/css/ionicons.min.css">
+		<link rel="stylesheet" href="/views/css/pace.css">
+	    <link rel="stylesheet" href="/views/css/custom.css">
+
+	    <!-- js -->
+	    <script src="/views/js/jquery-2.1.3.min.js"></script>
+	    <script src="/views/js/bootstrap.min.js"></script>
+	    <script src="/views/js/pace.min.js"></script>
+	    <script src="/views/js/modernizr.custom.js"></script><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
+		
+		<script>
+		var username = '<%=username%>';
+		var email = '<%=username%>';
+		
+		</script>
+<!--
+body {
+	background-color: #f4f4f4;
+	opacity:0.9;
+}
+.container {
+	background-color: #fff;
+}
+-->
+</style></head>
+
+	<body>
+		<br>
+		
+		<div class="container">	
+			<header id="site-header">
+				<div class="row">
+					<div class="col-md-4 col-sm-5 col-xs-8">
+						<div class="logo">
+							<h1><a href="/"><img src="views/img/logo.png" width="232" height="89"></a></h1>
+					  </div>
+					</div><!-- col-md-4 -->
+					<div class="col-md-8 col-sm-7 col-xs-4">
+						<nav class="main-nav" role="navigation">
+							<div class="navbar-header">
+  								<button type="button" id="trigger-overlay" class="navbar-toggle">
+    								<span class="ion-navicon"></span>
+  								</button>
+							</div>
+
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  								<ul class="nav navbar-nav navbar-right">
+								<br><br>
+    								<li class="cl-effect-11"><a href="/lobby" data-hover="Home">Home</a></li>
+    								<li class="cl-effect-11"><a href="/profile" data-hover="Profile">Profile</a></li>
+    								<li class="cl-effect-11"><a href="/newgame" data-hover="Create Game">Create Game</a></li>
+    								<li class="cl-effect-11"><a href="/logout" data-hover="Logout">Logout</a></li>
+  								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>
+						<!--
+						<div id="header-search-box">
+							<a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+							<div id="search-form" class="search-form">
+								<form role="search" method="get" id="searchform" action="#">
+									<input type="search" placeholder="Search" required>
+									<button type="submit"><span class="ion-ios-search-strong"></span></button>
+								</form>				
+							</div>
+						</div>
+						-->
+					</div><!-- col-md-8 -->
+				</div>
+			</header>
+			
+		<div class="content-body">
+				<div class="row">
+					<main class="col-md-10">
+					
+					<div class="col-sm-5 col-md-6 col-md-offset-3">
+							<header class="entry-header">
+								<h1 class="entry-title">Profile Page</h1>
+							</header>
+						<center>
+						
+						
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-6 col-md-8"><br><br>
+                        <h4><%=username%></h4>
+                        
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i><%=email%>
+                            <br />
+							
+                    </div>
+                </div>
+            </div>
+			
+						</center>
+					</main>
+					</div>
+				</div>
+			
+		</div>
+		<footer id="site-footer">
+			
+				<div class="row">
+					<div class="col-md-12">
+						<p class="copyright">&copy; 2018 RiskBudur</p>
+					</div>
+				</div>
+		</footer>
+		</div>
+		
+		<script src="/views/js/script.js"></script>
+
+	</body>
+</html>

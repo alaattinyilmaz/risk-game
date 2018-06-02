@@ -140,7 +140,19 @@ fieldset[disabled] .btn-fortify.active {
   color: #1642A8; 
   background-color: #FFFFFF; 
 }
-  .countryLabel{
+  .countryLabel0{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15;
+    background-color: #142267;
+    border:1;
+    border-color: #000000;
+    border-radius:140px;
+    box-shadow: 0 0px 0px;
+  }
+
+
+  .countryLabel1{
     color: #ffffff;
     font-weight: bold;
     font-size: 15;
@@ -149,8 +161,49 @@ fieldset[disabled] .btn-fortify.active {
     border-color: #000000;
     border-radius:140px;
     box-shadow: 0 0px 0px;
+  }  
+
+  .countryLabel2{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15;
+    background-color: #13ac03;
+    border:1;
+    border-color: #000000;
+    border-radius:140px;
+    box-shadow: 0 0px 0px;
   }
 
+  .countryLabel3{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15;
+    background-color: #6c8869;
+    border:1;
+    border-color: #000000;
+    border-radius:140px;
+    box-shadow: 0 0px 0px;
+  }
+  .countryLabel4{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15;
+    background-color: #DD4E07;
+    border:1;
+    border-color: #000000;
+    border-radius:140px;
+    box-shadow: 0 0px 0px;
+  }
+  .countryLabel5{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15;
+    background-color: #0C8F74;
+    border:1;
+    border-color: #000000;
+    border-radius:140px;
+    box-shadow: 0 0px 0px;
+  }
     .btn-group{
     padding: 2%;
     display: table-cell;
@@ -160,3 +213,61 @@ fieldset[disabled] .btn-fortify.active {
     bottom: 10px;
     width: 100%;
   }
+        .chat
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .chat li
+    {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px dotted #B3A9A9;
+    }
+
+    .chat li.left .chat-body
+    {
+        margin-left: 60px;
+    }
+
+    .chat li.right .chat-body
+    {
+        margin-right: 60px;
+    }
+
+
+    .chat li .chat-body p
+    {
+        margin: 0;
+        color: #777777;
+    }
+
+    .panel .slidedown .glyphicon, .chat .glyphicon
+    {
+        margin-right: 5px;
+    }
+
+    .panel-body
+    {
+        overflow-y: scroll;
+        height: 200px;
+    }
+
+    ::-webkit-scrollbar-track
+    {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar
+    {
+        width: 12px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #transparent;
+    }

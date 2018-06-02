@@ -6,7 +6,11 @@ var countries = {
       "properties": {
         "CONTINENT": "South America",
         "NAME": "Venezuela",
-        "NEIGHBORS": ["Mexico", "Brazil", "PERU"],
+        "NEIGHBORS": [
+          "Mexico",
+          "Brazil",
+          "PERU"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -150,7 +154,12 @@ var countries = {
       "properties": {
         "CONTINENT": "South America",
         "NAME": "Brazil",
-        "NEIGHBORS": ["Argentina", "Venezuela", "PERU", "North Africa"],
+        "NEIGHBORS": [
+          "Argentina",
+          "Venezuela",
+          "PERU",
+          "North Africa"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -458,7 +467,11 @@ var countries = {
       "properties": {
         "CONTINENT": "South America",
         "NAME": "PERU",
-        "NEIGHBORS": ["Argentina", "Venezuela", "Brazil"],
+        "NEIGHBORS": [
+          "Argentina",
+          "Venezuela",
+          "Brazil"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -842,7 +855,10 @@ var countries = {
       "properties": {
         "CONTINENT": "South America",
         "NAME": "Argentina",
-        "NEIGHBORS": ["Venezuela", "PERU"],
+        "NEIGHBORS": [
+          "Venezuela",
+          "PERU"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -1178,7 +1194,11 @@ var countries = {
       "properties": {
         "CONTINENT": "North America",
         "NAME": "Mexico",
-        "NEIGHBORS": ["Eastern United States", "Venezuela", "Western United States"],
+        "NEIGHBORS": [
+          "Eastern United States",
+          "Venezuela",
+          "Western United States"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -1618,7 +1638,12 @@ var countries = {
       "properties": {
         "CONTINENT": "North America",
         "NAME": "Western United States",
-        "NEIGHBORS": ["Eastern United States", "Mexico", "Alberta", "Ontario"],
+        "NEIGHBORS": [
+          "Eastern United States",
+          "Mexico",
+          "Alberta",
+          "Ontario"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -1842,7 +1867,11 @@ var countries = {
       "properties": {
         "CONTINENT": "North America",
         "NAME": "Eastern United States",
-        "NEIGHBORS": ["Ontario", "Eastern Canada", "Western United States"],
+        "NEIGHBORS": [
+          "Ontario",
+          "Eastern Canada",
+          "Western United States"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -2158,7 +2187,11 @@ var countries = {
       "properties": {
         "CONTINENT": "North America",
         "NAME": "Eastern Canada",
-        "NEIGHBORS": ["Eastern United States", "Ontario", "Greenland"],
+        "NEIGHBORS": [
+          "Eastern United States",
+          "Ontario",
+          "Greenland"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -2326,7 +2359,11 @@ var countries = {
       "properties": {
         "CONTINENT": "North America",
         "NAME": "Alaska",
-        "NEIGHBORS": ["North West Territory", "Alberta", "Khamchatka"],
+        "NEIGHBORS": [
+          "North West Territory",
+          "Alberta",
+          "Khamchatka"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -2450,7 +2487,12 @@ var countries = {
       "properties": {
         "CONTINENT": "North America",
         "NAME": "North West Territory",
-        "NEIGHBORS": ["Alaska", "Alberta", "Ontario", "Greenland"],
+        "NEIGHBORS": [
+          "Alaska",
+          "Alberta",
+          "Ontario",
+          "Greenland"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -2690,7 +2732,14 @@ var countries = {
       "properties": {
         "CONTINENT": "North America",
         "NAME": "Ontario",
-        "NEIGHBORS": ["Eastern United States", "Alberta", "Western United States", "Eastern Canada", "North West Territory", "Greenland"],
+        "NEIGHBORS": [
+          "Eastern United States",
+          "Alberta",
+          "Western United States",
+          "Eastern Canada",
+          "North West Territory",
+          "Greenland"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -2806,7 +2855,12 @@ var countries = {
       "properties": {
         "CONTINENT": "North America",
         "NAME": "Alberta",
-        "NEIGHBORS": ["Ontario", "Alaska", "North West Territory", "Western United States"],
+        "NEIGHBORS": [
+          "Ontario",
+          "Alaska",
+          "North West Territory",
+          "Western United States"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -2898,7 +2952,12 @@ var countries = {
       "properties": {
         "CONTINENT": "Africa",
         "NAME": "Egypt",
-        "NEIGHBORS": ["Southern Europe", "Middle East", "North Africa", "East Africa"],
+        "NEIGHBORS": [
+          "Southern Europe",
+          "Middle East",
+          "North Africa",
+          "East Africa"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -3018,7 +3077,13 @@ var countries = {
       "properties": {
         "CONTINENT": "Africa",
         "NAME": "North Africa",
-        "NEIGHBORS": ["Western Europe", "Brazil", "Egypt", "East Africa", "Congo"],
+        "NEIGHBORS": [
+          "Western Europe",
+          "Brazil",
+          "Egypt",
+          "East Africa",
+          "Congo"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -3242,7 +3307,13 @@ var countries = {
       "properties": {
         "CONTINENT": "Africa",
         "NAME": "East Africa",
-        "NEIGHBORS": ["Egypt", "Middle East", "Madagascar", "Congo", "North Africa"],
+        "NEIGHBORS": [
+          "Egypt",
+          "Middle East",
+          "Madagascar",
+          "Congo",
+          "North Africa"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -3446,7 +3517,11 @@ var countries = {
       "properties": {
         "CONTINENT": "Africa",
         "NAME": "Congo",
-        "NEIGHBORS": ["North Africa", "South Africa", "East Africa"],
+        "NEIGHBORS": [
+          "North Africa",
+          "South Africa",
+          "East Africa"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -3618,7 +3693,11 @@ var countries = {
       "properties": {
         "CONTINENT": "Africa",
         "NAME": "South Africa",
-        "NEIGHBORS": ["Congo", "Madagascar", "East Africa"],
+        "NEIGHBORS": [
+          "Congo",
+          "Madagascar",
+          "East Africa"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -4054,7 +4133,14 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "Middle East",
-        "NEIGHBORS": ["Egypt", "East Africa", "India", "Afghanistan", "Ukraine", "Southern Europe"],
+        "NEIGHBORS": [
+          "Egypt",
+          "East Africa",
+          "India",
+          "Afghanistan",
+          "Ukraine",
+          "Southern Europe"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -4362,7 +4448,11 @@ var countries = {
       "properties": {
         "CONTINENT": "Europe",
         "NAME": "Western Europe",
-        "NEIGHBORS": ["North Africa", "Southern Europe", "Northern Europe"],
+        "NEIGHBORS": [
+          "North Africa",
+          "Southern Europe",
+          "Northern Europe"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -4606,7 +4696,13 @@ var countries = {
       "properties": {
         "CONTINENT": "Europe",
         "NAME": "Southern Europe",
-        "NEIGHBORS": ["Egypt", "Middle East", "Northern Europe", "Southern Europe", "Ukraine"],
+        "NEIGHBORS": [
+          "Egypt",
+          "Middle East",
+          "Northern Europe",
+          "Southern Europe",
+          "Ukraine"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -4966,8 +5062,14 @@ var countries = {
       "properties": {
         "CONTINENT": "Europe",
         "NAME": "Ukraine",
-        "NEIGHBORS": ["Ural", "Afghanistan", "Middle East",
-         "Scandinavia", "Northern Europe", "Southern Europe"],
+        "NEIGHBORS": [
+          "Ural",
+          "Afghanistan",
+          "Middle East",
+          "Scandinavia",
+          "Northern Europe",
+          "Southern Europe"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -5379,7 +5481,12 @@ var countries = {
       "properties": {
         "CONTINENT": "Europe",
         "NAME": "Scandinavia",
-        "NEIGHBORS": ["Ukraine", "Northern Europe", "Iceland", "Great Britain"],
+        "NEIGHBORS": [
+          "Ukraine",
+          "Northern Europe",
+          "Iceland",
+          "Great Britain"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -5699,7 +5806,13 @@ var countries = {
       "properties": {
         "CONTINENT": "Europe",
         "NAME": "Northern Europe",
-        "NEIGHBORS": ["Great Britain", "Scandinavia", "Southern Europe", "Western Europe", "Ukraine"],
+        "NEIGHBORS": [
+          "Great Britain",
+          "Scandinavia",
+          "Southern Europe",
+          "Western Europe",
+          "Ukraine"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -6019,7 +6132,11 @@ var countries = {
       "properties": {
         "CONTINENT": "Europe",
         "NAME": "Great Britain",
-        "NEIGHBORS": ["Iceland", "Scandinavia", "Northern Europe"],
+        "NEIGHBORS": [
+          "Iceland",
+          "Scandinavia",
+          "Northern Europe"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -6247,7 +6364,11 @@ var countries = {
       "properties": {
         "CONTINENT": "Europe",
         "NAME": "Iceland",
-        "NEIGHBORS": ["Greenland", "Great Britain", "Scandinavia"],
+        "NEIGHBORS": [
+          "Greenland",
+          "Great Britain",
+          "Scandinavia"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -6315,7 +6436,12 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "India",
-        "NEIGHBORS": ["Middle East", "Afghanistan", "China", "Siam"],
+        "NEIGHBORS": [
+          "Middle East",
+          "Afghanistan",
+          "China",
+          "Siam"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -6567,7 +6693,13 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "Afghanistan",
-        "NEIGHBORS": ["Middle East", "Ukraine", "Ural", "India", "China"],
+        "NEIGHBORS": [
+          "Middle East",
+          "Ukraine",
+          "Ural",
+          "India",
+          "China"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -6763,7 +6895,10 @@ var countries = {
       "properties": {
         "CONTINENT": "Africa",
         "NAME": "Madagascar",
-        "NEIGHBORS": ["South Africa", "East Africa"],
+        "NEIGHBORS": [
+          "South Africa",
+          "East Africa"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -6843,7 +6978,11 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "Siam",
-        "NEIGHBORS": ["Indonesia", "India", "China"],
+        "NEIGHBORS": [
+          "Indonesia",
+          "India",
+          "China"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -7107,7 +7246,14 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "China",
-        "NEIGHBORS": ["Afghanistan", "Siam", "India", "Siberia", "Ural", "Mongolia"],
+        "NEIGHBORS": [
+          "Afghanistan",
+          "Siam",
+          "India",
+          "Siberia",
+          "Ural",
+          "Mongolia"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -7347,7 +7493,13 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "Mongolia",
-        "NEIGHBORS": ["China", "Siberia", "Irutsk", "Kamchatka", "Japan"],
+        "NEIGHBORS": [
+          "China",
+          "Siberia",
+          "Irutsk",
+          "Kamchatka",
+          "Japan"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -7643,7 +7795,12 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "Ural",
-        "NEIGHBORS": ["Ukraine", "Siberia", "Afghanistan", "China"],
+        "NEIGHBORS": [
+          "Ukraine",
+          "Siberia",
+          "Afghanistan",
+          "China"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -8091,7 +8248,13 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "Kamchatka",
-        "NEIGHBORS": ["Alaska", "Japan", "Irutsk", "Yakutsk", "Mongolia"],
+        "NEIGHBORS": [
+          "Alaska",
+          "Japan",
+          "Irutsk",
+          "Yakutsk",
+          "Mongolia"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -8443,7 +8606,11 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "Yakutsk",
-        "NEIGHBORS": ["Irutsk", "Kamchatka", "Siberia"],
+        "NEIGHBORS": [
+          "Irutsk",
+          "Kamchatka",
+          "Siberia"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -8803,7 +8970,13 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "Siberia",
-        "NEIGHBORS": ["Ural", "Yakutsk", "Irutsk", "Mongolia", "China"],
+        "NEIGHBORS": [
+          "Ural",
+          "Yakutsk",
+          "Irutsk",
+          "Mongolia",
+          "China"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -9223,7 +9396,12 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "Irutsk",
-        "NEIGHBORS": ["Mongolia", "Yakutsk", "Siberia", "Kamchatka"],
+        "NEIGHBORS": [
+          "Mongolia",
+          "Yakutsk",
+          "Siberia",
+          "Kamchatka"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -9363,7 +9541,10 @@ var countries = {
       "properties": {
         "CONTINENT": "Asia",
         "NAME": "Japan",
-        "NEIGHBORS": ["Khamchatka", "Mongolia"],
+        "NEIGHBORS": [
+          "Khamchatka",
+          "Mongolia"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -9555,7 +9736,11 @@ var countries = {
       "properties": {
         "CONTINENT": "Oceania",
         "NAME": "Indonesia",
-        "NEIGHBORS": ["Siam", "New Guinea", "Australia"],
+        "NEIGHBORS": [
+          "Siam",
+          "New Guinea",
+          "Australia"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -9887,7 +10072,10 @@ var countries = {
       "properties": {
         "CONTINENT": "Oceania",
         "NAME": "New Guinea",
-        "NEIGHBORS": ["Indonesia", "Australia"],
+        "NEIGHBORS": [
+          "Indonesia",
+          "Australia"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -10119,7 +10307,10 @@ var countries = {
       "properties": {
         "CONTINENT": "Oceania",
         "NAME": "Australia",
-        "NEIGHBORS": ["Indonesia", "New Guinea"],
+        "NEIGHBORS": [
+          "Indonesia",
+          "New Guinea"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -10480,8 +10671,15 @@ var countries = {
     },
     {
       "type": "Feature",
-      "properties": {"CONTINENT": "North America", "NAME": "Greenland",
-      "NEIGHBORS": ["North West Territory", "Ontario", "Eastern Canada", "Iceland"],
+      "properties": {
+        "CONTINENT": "North America",
+        "NAME": "Greenland",
+        "NEIGHBORS": [
+          "North West Territory",
+          "Ontario",
+          "Eastern Canada",
+          "Iceland"
+        ],
         "ARMYCOUNT": 0
       },
       "geometry": {
@@ -10612,6 +10810,414 @@ var countries = {
               -43.9453125,
               60.413852350464914
             ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -35.5517578125,
+            -5.309766171943678
+          ],
+          [
+            -13.68896484375,
+            8.47237228290914
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            40.5615234375,
+            -3.118576216781991
+          ],
+          [
+            46.93359375,
+            -14.987239525774244
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            44.18701171875,
+            -20.427012814257385
+          ],
+          [
+            35.22216796875,
+            -21.6778482933475
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.3955078125,
+            43.91372326852401
+          ],
+          [
+            139.81201171874997,
+            40.07807142745009
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            128.82568359375,
+            37.85750715625203
+          ],
+          [
+            134.38476562499997,
+            35.567980458012094
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -52.55859375,
+            65.14611484756372
+          ],
+          [
+            -62.314453125,
+            58.03137242177637
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -93.603515625,
+            58.722598828043374
+          ],
+          [
+            -52.71240234375,
+            71.40617196718854
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -81.650390625,
+            69.27170867031614
+          ],
+          [
+            -54.744873046875,
+            73.50658000002177
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -27.26806640625,
+            68.12248241161676
+          ],
+          [
+            -23.203125,
+            66.00908582293678
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -10.0634765625,
+            62.71446210149774
+          ],
+          [
+            -5.1416015625,
+            58.459228692360625
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.295410156249999,
+            64.63329214257156
+          ],
+          [
+            5.8447265625,
+            62.17575962070838
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.3780517578125,
+            35.61711648382185
+          ],
+          [
+            -4.39453125,
+            36.301845303684324
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.9116210937499998,
+            57.51582286553883
+          ],
+          [
+            5.625,
+            59.2771080105117
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -1.9555664062500002,
+            57.397624055000456
+          ],
+          [
+            6.8994140625,
+            53.56641415275043
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5.6689453125,
+            59.130863097255904
+          ],
+          [
+            6.910400390625,
+            53.56641415275043
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.17578125,
+            51.034485632974125
+          ],
+          [
+            0.7470703125,
+            49.85923471774692
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -166.2890625,
+            64.47279382008166
+          ],
+          [
+            -180.615234375,
+            64.47279382008166
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            178.2421875,
+            62.99515845212052
+          ],
+          [
+            200.91796874999997,
+            62.83508901142283
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            22.752685546874996,
+            36.500805317604794
+          ],
+          [
+            22.752685546874996,
+            32.61161640317033
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.271484375,
+            41.22824901518529
+          ],
+          [
+            10.96435546875,
+            36.94989178681327
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            123.00292968749999,
+            -4.34641127533318
+          ],
+          [
+            134.736328125,
+            -4.171115454867424
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            134.725341796875,
+            -4.149200693099276
+          ],
+          [
+            134.9560546875,
+            -12.125264218331578
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            134.82421875,
+            -4.083452772038619
+          ],
+          [
+            124.45312499999999,
+            -14.944784875088372
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            123.70605468750001,
+            -8.798225459016345
+          ],
+          [
+            123.8818359375,
+            -16.404470456702423
           ]
         ]
       }

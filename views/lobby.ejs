@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RISKBudur / Lobby</title>
+
+		<!-- meta -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- css -->
+		<link rel="stylesheet" href="/views/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/views/css/ionicons.min.css">
+		<link rel="stylesheet" href="/views/css/pace.css">
+	    <link rel="stylesheet" href="/views/css/custom.css">	
+	    <script src="../socket.io/socket.io.js"></script>
+
+	    <!-- js -->
+	    <script src="/views/js/jquery-2.1.3.min.js"></script>
+	    <script src="/views/js/bootstrap.min.js"></script>
+	    <script src="/views/js/pace.min.js"></script>
+	    <script src="/views/js/modernizr.custom.js"></script><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
+<!--
+body {
+	background-color: #f4f4f4;
+	opacity:0.9;
+}
+.container {
+	background-color: #fff;
+}
+-->
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+</style></head>
+
+	<body>
+
+<script type="text/javascript">
+var username = '<%=username%>';
+</script>
+
+		<br>
+		
+		<div class="container">	
+			<header id="site-header">
+				<div class="row">
+					<div class="col-md-4 col-sm-5 col-xs-8">
+						<div class="logo">
+							<h1><a href="/lobby"><img src="views/img/logo.png" width="232" height="89"></a></h1>
+					  </div>
+					</div><!-- col-md-4 -->
+					<div class="col-md-8 col-sm-7 col-xs-4">
+						<nav class="main-nav" role="navigation">
+							<div class="navbar-header">
+  								<button type="button" id="trigger-overlay" class="navbar-toggle">
+    								<span class="ion-navicon"></span>
+  								</button>
+							</div>
+
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  								<ul class="nav navbar-nav navbar-right">
+								<br><br>
+    								<li class="cl-effect-11"><a href="/lobby" data-hover="Home">Home</a></li>
+    								<li class="cl-effect-11"><a href="/profile" data-hover="Profile">Profile</a></li>	 	
+    								<li class="cl-effect-11"><a href="/newgame" data-hover="Create Game">Create Game</a></li>
+    								<li class="cl-effect-11"><a href="/logout" data-hover="Logout">Logout</a></li>
+  								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>
+						<!--
+						<div id="header-search-box">
+							<a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+							<div id="search-form" class="search-form">
+								<form role="search" method="get" id="searchform" action="#">
+									<input type="search" placeholder="Search" required>
+									<button type="submit"><span class="ion-ios-search-strong"></span></button>
+								</form>				
+							</div>
+						</div>
+						-->
+					</div><!-- col-md-8 -->
+				</div>
+			</header>
+			
+		<div class="content-body">
+				<div class="row">
+					<main class="col-md-5">Welcome <%= username %> !</main>
+				</div>
+				<div class="row">
+					<main class="col-md-5">
+					  <article class="post post-4">
+							<header class="entry-header">
+								<h1 class="entry-title"><a href="">Online Games </a></h1>
+							</header>
+							<div class="entry-content clearfix" id="onlinegamespanel">
+								<center> No Active Game but you can create by <a href="/newgame">CREATE GAME</a></center>
+							</div>
+						</article>
+						
+						
+					</main>
+					<aside class="col-md-7">
+					  <div class="widget widget-recent-posts">		
+					    
+								<h1 class="entry-title">Lobby</h1>
+					            <div class="entry-content clearfix">
+								
+								
+									<div class="container-fluid">
+									
+										 <div class="row">
+
+										 <div class="col-md-9">
+										<div id="messages" class="panel-body">
+										</div>
+										</div>
+									
+										<div class="col-md-3">	
+											<div id="onlines" class="panel-body">
+											</div>
+										</div>
+											
+										<center><input id="textarea" type="text" class="form-control" placeholder="Type your message here..." /></center>
+										</div>
+									
+									</div>
+
+						
+					              </div>
+					            <p>&nbsp;  </p>
+								
+					  </div>
+					</aside>
+				</div>
+			
+		</div>
+		<footer id="site-footer">
+			
+				<div class="row">
+					<div class="col-md-12">
+						<p class="copyright">&copy; 2018 RiskBudur</p>
+					</div>
+				</div>
+		</footer>
+		</div>
+		<script>
+		
+		var socket = io('/lobby');
+        if(socket != undefined)
+        { console.log("Socket connected to server."); }
+		
+				
+        var element = function(id)
+        {
+            return document.getElementById(id);
+        }
+
+        var messages = element('messages');
+        var onlines = element('onlines');
+        var textarea = element('textarea');
+        var onlinegamespanel = element('onlinegamespanel');
+		
+		
+		/// CLIENT SIDE BEGIN ///
+		
+
+             socket.emit('getlobbymsgs', {lobby: 1}); // Request to get messages
+			 socket.emit('getonlines', {online: 1}); // Request to get online people
+			 socket.emit('getgames', {online: 1}); // Request to get online people
+			 //socket.emit('newuser', {username: username}); // Request to get online people
+			 
+		    // Handle Output Events
+            socket.on('outputlobbymsg', function(data){
+              if(data.length)
+              {
+                for (i = 0; i < data.length; i++)
+                {
+                  var chatMessage = document.createElement('div');
+                  chatMessage.id = 'chatmsgs';
+                  var message = document.createElement('div');
+                  chatMessage.innerHTML = '';
+                  chatMessage.innerHTML = chatMessage.innerHTML + "<b><a href='profile/"+ data[i].lobbyname +"'> " + data[i].lobbyname +"</b>: " + data[i].lobbymessage;
+                  messages.append(chatMessage);
+                }
+              }
+              $("#messages").scrollTop($('#messages')[0].scrollHeight);
+            });
+
+
+
+              socket.on('outputonlines', function(data){
+              if(data.length)
+              {
+              	console.log(data);
+                var onlineInnerHTML = '';
+
+                for (i = 0; i < data.length; i++)
+                {
+                  onlineInnerHTML = onlineInnerHTML + data[i].username + '<br>';
+                }
+
+                //console.log(onlineInnerHTML);
+                onlines.innerHTML = onlineInnerHTML	;
+              }
+
+              $("#onlines").scrollTop($('#onlines')[0].scrollHeight);
+              });
+
+
+ 			  socket.on('onlinegames', function(data){
+              if(data.length)
+              {
+              	console.log(data);
+                var onlineGamesInnerHTML	 = '';
+
+                for (i = 0; i < data.length; i++)
+                {
+                  onlineGamesInnerHTML = onlineGamesInnerHTML + '<div class="gallery"><a target="_blank" href="/game/'+data[i].gameid+'"><img src="views/img/game'+data[i].maplevel+'.png" alt="" width="300" height="200"></a><div class="desc">ROOM '+data[i].gameid+'<br>'+data[i].howmany+' PEOPLE<br>'+data[i].maplevel.toUpperCase()+'</div></div>';
+                }
+
+                //console.log(onlineInnerHTML);
+                onlinegamespanel.innerHTML = onlineGamesInnerHTML;
+              }
+
+             // $("#onlines").scrollTop($('#onlines')[0].scrollHeight);
+              });
+
+
+/*
+              socket.on('onlinegames', function(data){
+              if(data.length)
+              {
+              	console.log(data);
+                var onlineInnerHTML = '';
+
+                for (i = 0; i < data.length; i++)
+                {
+                  onlineGamesInnerHTML = onlineGamesInnerHTML + '<div class="gallery"><a target="_blank" href="fjords.jpg"><img src="fjords.jpg" alt="Fjords" width="300"height="200"></a><div class="desc">Add a description of the image here</div></div>'
+
+                  data[i].username + '<br>';
+                }
+
+                //console.log(onlineInnerHTML);
+                onlines.innerHTML = onlineInnerHTML	;
+              }
+
+*/
+		
+
+
+/*
+              socket.on('outputonlines', function(data){
+              if(data.length)
+              {
+              	console.log(data);
+                for (i = 0; i < data.length; i++)
+                {
+                  var onlinePerson = document.createElement('div');
+                  onlinePerson.id = 'onlineperson';
+                //  var message = document.createElement('div');
+                  onlinePerson.innerHTML = '';
+                  onlinePerson.innerHTML = onlinePerson.innerHTML + data[i];
+                }
+                onlines.innerHTML(onlinePerson);
+
+              }
+
+              $("#onlines").scrollTop($('#onlines')[0].scrollHeight);
+            });
+*/
+		
+		/// CLIENT SIDE END ///
+
+
+             // Handle Input
+                textarea.addEventListener('keydown', function(event){
+                    if(event.which === 13 && event.shiftKey == false){ // enter tusu
+                        // Emit to server input
+                        socket.emit('newlobbymessage', { username: username, message:textarea.value });
+                        textarea.value = '';
+                        event.preventDefault();
+                    }
+                });
+				
+
+		</script>
+		<script src="/views/js/script.js"></script>
+
+	</body>
+</html>

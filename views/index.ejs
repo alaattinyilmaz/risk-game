@@ -1,31 +1,60 @@
-<% include partials/header %>
-	<h1> This is a TEST Server Environment for RISKBUDUR </h1>
+<html>
+<head>
+  <title>RISKBudur / MAP</title>
+  <!--Leaflet-->
+  <link rel="stylesheet" href="../../../public/map/lib/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../public/map/style/style.css">
+  <script src="../../../public/map/lib/leaflet/leaflet.js"></script>
+  <script src="../../../public/map/data/countries.geojson"></script>
+  <script src="../../../public/map/data/countries30.geojson"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+  <script  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-	<form method="POST" action="/users/add/">
+  <script type="text/javascript">
+  var userid = '<%=userid%>';
+  var username = '<%=username%>';
+  var maplevel = '<%=maplevel%>';
+  var howmany = '<%=howmany%>';
+  var gameid = '<%=gameid%>';
+  var creater = '<%=creater%>';
+  </script>
 
-	<label> First Name </label>
-	<input type = "text" name = "first_name">
-	<br>
+  <style> #map{height : 100%;width :100%;} </style>
+</head>
+<body>
+  <div id="map">
+    <br><br><div align="left"><img src="../../../views/img/logo.png" width="280" height="100"></div><br>
+    <br><br><div align="right">   <div class="col-md-12"><h1><b><%=username%></b></h1><br><h1><b>creater: <%=creater%></b></h1></div> </div><br>
 
-	<label> Last Name </label>
-	<input type = "text" name = "last_name">
-	<br>	
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
 
-	<label> Email </label>
-	<input type = "text" name = "email">
-	<br>
+                <div id="messages" class="panel-body">
+                 </div>
+                <input id="textarea" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="container-fluid">
+<b>Game Log</b>
+    <div class="row">
+        <div class="col-md-2">
 
-	<input type ="submit" value = "Submit"> 
-	</form>
- 	<h1><%=title %></h1>
-	<ul> 
+                <div id="gamelog" class="panel-body">
+                 </div>
+        </div>
+    </div>
+</div>
 
-	<% users.forEach(function(user){ %>
+<script src="../../../public/map/gamelogic.js"></script>
 
-	<li>
-	<%= user.first_name %>
-	</li>
-	<% }) %>
-
-	</ul>
-<% include partials/footer %>
+<script type="text/javascript">
+  /*
+<h1 class="text-center">Chat</h1><div id="status"></div> <div id="chat"> <input type="hidden" id="username" class="form-control" placeholder="Enter name"> <div class="card"> <div id="messages" class="card-block"> </div> <br> <textarea id="textarea" class="form-control" placeholder="Enter a message..."></textarea></div> </h1> </div></div>
+  */
+</script>
+</body>
+</html>
