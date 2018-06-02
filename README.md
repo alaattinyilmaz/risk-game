@@ -1,6 +1,6 @@
-# risk-game
+# RISKBudur
 
-This is a javascript based implementation of risk strategy board game.
+RISKBudur is a turn based strategy and board game engine that allows to play 2 to 6 people. This game has several customizable map options as Easy, Medium and Hard. Also, it allows people to chat in lobby page and game page. People can join in rooms in order to play in realtime. 
 
 ![Risk Game](https://serving.photos.photobox.com/4967175768c6285a6ca23041ad26353f3170c445ea842808e0bd23c1a80ec95abedc0ba5.jpg)
 
@@ -18,6 +18,8 @@ We used several technologies in our system.
 Server: Express 
 
 Database: MongoDB
+
+Realtime: Socket.io
 
 Map: Leaftlet - https://leafletjs.com
 
