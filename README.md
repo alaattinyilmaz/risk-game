@@ -14,8 +14,11 @@ Lobby
 # Technologies
 
 We used several technologies in our system. 
+
 Server: Express 
+
 Database: MongoDB
+
 Map: Leaftlet - https://leafletjs.com
 
 # How to run?
