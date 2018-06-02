@@ -18,12 +18,8 @@ use chatdb
 Database Tables:
 
 db.createCollection('gameutils');
-
 db.createCollection('players');
-
 db.createCollection('territories');
-
 db.createCollection('lobbychat');
-
 db.createCollection('users');
  
