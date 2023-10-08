@@ -2,11 +2,11 @@
 
 RISKBudur is a turn based strategy and board game engine that allows to play 2 to 6 people. This game has several customizable map options as Easy, Medium and Hard. Also, it allows people to chat in lobby page and game page. People can join in rooms in order to play in realtime. 
 
-![Risk Game](https://serving.photos.photobox.com/4967175768c6285a6ca23041ad26353f3170c445ea842808e0bd23c1a80ec95abedc0ba5.jpg)
+![Risk Game](https://alaatt.in/images/riskbudur1.jpeg)
 
-![Login Page](https://serving.photos.photobox.com/039146294be565be1f6d6ab31f69c9336a24d2ece41faa9a621a39a50b7d39ea6fbfde84.jpg)
+![Login Page](https://alaatt.in/images/riskbudur2.jpeg)
 
-![Lobby](https://serving.photos.photobox.com/814345208cdc98ded139034d6fb41f3b92a7a884517cd509e5ddfcd9f1073d3a748f1b16.jpg)
+![Lobby](https://alaatt.in/images/riskbudur3.jpeg)
 
 
 # Technologies
